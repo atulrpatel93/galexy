@@ -1,0 +1,39 @@
+<ion-content  (click)="close()" class="bgTransparent" style="background-color: #000000a6">
+
+</ion-content>
+
+<ion-footer class="popUpFooter">
+    <div class="middle_content">
+        <div class="content">
+            <div class="title_bar">
+              <img src="../../assets/imgs/main_avatar.png" alt="">
+              <p>420Portal</p>
+            </div>
+            <img src="../../assets/imgs/weedgram/1.jpg" alt="" style="width: 100%;">
+            <div class="bottome_bar">
+              <span class="title_relative" (touchstart)="showTitle('like')" (touchend)="SubmitDetails('like')">
+                  <span *ngIf="title" class="title">Like</span>
+                  <ion-icon *ngIf="fillHeart" ios="ios-heart-outline" md="md-heart"></ion-icon>
+                  <ion-icon *ngIf="!fillHeart" name="heart-outline"></ion-icon>
+                </span>
+            
+              <span class="title_relative" (touchstart)="showTitle('viewProfile')" (touchend)="SubmitDetails('viewProfile')">
+                  <span *ngIf="viewProfile" class="title">view profile</span>
+                  <!-- <ion-icon *ngIf="fillHeart" ios="ios-heart-outline" md="md-heart"></ion-icon>
+                  <ion-icon *ngIf="!fillHeart" name="heart-outline"></ion-icon> -->
+                  <img src="../../assets/imgs/icon-account1.png" alt="">
+                </span>
+                <span class="title_relative" (touchstart)="showTitle('share')" (touchend)="SubmitDetails('share')">
+                    <span *ngIf="share" class="title">share</span>
+                    <img src="../../assets/imgs/icon-send.png" alt="">
+                  </span>
+                  <span class="title_relative" (touchstart)="showTitle('option')" (touchend)="SubmitDetails('option')">
+                      <span *ngIf="option" class="title">option</span>
+                      <img src="../../assets/imgs/icon-dot.png" alt="" >
+                    </span>
+                  
+            </div>
+          </div>
+    </div> 
+  
+</ion-footer>
